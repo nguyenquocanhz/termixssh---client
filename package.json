@@ -1,6 +1,9 @@
 {
   "name": "termix",
   "version": "1.0.0",
+  "author": "Nguyen Quoc Anh <nguyenquocanhz@users.noreply.github.com>",
+  "repository": "https://github.com/nguyenquocanhz/TermixSSH---Client",
+  "homepage": "https://vtechzones.com",
   "description": "SSH Terminal Client",
   "main": "src/main/index.js",
   "scripts": {
