@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0d1117;
+    color: #e2e8f0;
+    font-family:
+      "Inter",
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
+  }
+}
+
+@layer utilities {
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: #1e2530;
+    border-radius: 2px;
+  }
+
+  .resize-handle {
+    cursor: col-resize;
+    position: absolute;
+    right: -2px;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    z-index: 10;
+    transition: background-color 0.2s;
+  }
+  .resize-handle:hover,
+  .resize-handle.active {
+    background-color: rgba(59, 130, 246, 0.5); /* Blue 500 */
+  }
+
+  .resize-handle-left {
+    cursor: col-resize;
+    position: absolute;
+    left: -2px;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    z-index: 10;
+    transition: background-color 0.2s;
+  }
+  .resize-handle-left:hover, .resize-handle-left.active {
+    background-color: rgba(59, 130, 246, 0.5); /* Blue 500 */
+  }
+
+  /* Scrollbar xterm — màu đen cùng tông terminal */
+  .xterm .xterm-viewport::-webkit-scrollbar {
+    width: 4px;
+  }
+  .xterm .xterm-viewport::-webkit-scrollbar-track {
+    background: #0d1117;
+  }
+  .xterm .xterm-viewport::-webkit-scrollbar-thumb {
+    background: #1a1f2b;
+    border-radius: 4px;
+  }
+  .xterm .xterm-viewport::-webkit-scrollbar-thumb:hover {
+    background: #252d3a;
+  }
+  .xterm .xterm-viewport {
+    scrollbar-width: thin;
+    scrollbar-color: #1a1f2b #0d1117;
+  }
+}
